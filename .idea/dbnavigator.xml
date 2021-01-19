@@ -23,18 +23,22 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="ee7f0847-8f42-4181-9d11-b58b0a71dee4">
+        <schema name="pg_toast_temp_1" object-types="sequence, table, function, view" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="fba8ace5-0d81-4c51-9804-ec9e07e39e8f">
-      <console name="REST" type="STANDARD" schema="information_schema" session="Main" />
+    <connection id="ee7f0847-8f42-4181-9d11-b58b0a71dee4">
+      <console name="Connection" type="STANDARD" schema="information_schema" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="fba8ace5-0d81-4c51-9804-ec9e07e39e8f" />
+    <connection id="ee7f0847-8f42-4181-9d11-b58b0a71dee4" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -44,6 +48,7 @@
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/database/initDB.sql" connection-id="fba8ace5-0d81-4c51-9804-ec9e07e39e8f" session-id="MAIN" current-schema="information_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/database/populateDB.sql" connection-id="fba8ace5-0d81-4c51-9804-ec9e07e39e8f" session-id="MAIN" current-schema="information_schema" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
@@ -67,9 +72,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="fba8ace5-0d81-4c51-9804-ec9e07e39e8f" active="true">
+      <connection id="ee7f0847-8f42-4181-9d11-b58b0a71dee4" active="true">
         <database>
-          <name value="REST" />
+          <name value="Connection" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />

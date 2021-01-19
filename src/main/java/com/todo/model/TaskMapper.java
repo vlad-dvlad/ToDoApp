@@ -13,8 +13,8 @@ public class TaskMapper implements RowMapper<Task> {
         task.setId(rs.getLong("id"));
         task.setName(rs.getString("title"));
         task.setCategory(rs.getString("task_category"));
-        task.setComplete(rs.getBoolean("is_complete"));
-        task.setImportant(rs.getBoolean("is_complete"));
-        return null;
+        task.setIsComplete(rs.getBoolean("is_complete"));
+        task.setIsImportant(rs.getBoolean("is_important"));
+        return task;
     }
 }

@@ -14,6 +14,17 @@ public class Task {
     private boolean isComplete;
     private boolean isImportant;
 
+    public Task(Long id, String name, String category, boolean isComplete, boolean isImportant) {
+        this.id = id;
+        this.name = name;
+        this.category = category;
+        this.isComplete = isComplete;
+        this.isImportant = isImportant;
+    }
+
+    public Task() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -38,19 +49,19 @@ public class Task {
         this.category = category;
     }
 
-    public boolean isComplete() {
+    public boolean getIsComplete() {
         return isComplete;
     }
 
-    public void setComplete(boolean complete) {
+    public void setIsComplete(boolean complete) {
         isComplete = complete;
     }
 
-    public boolean isImportant() {
+    public boolean getIsImportant() {
         return isImportant;
     }
 
-    public void setImportant(boolean important) {
+    public void setIsImportant(boolean important) {
         isImportant = important;
     }
 
