@@ -46,13 +46,13 @@ public class TaskDAOImpl implements TaskDAO {
 
     @Override
     public boolean updateTask(Task task) {
-        return jdbcTemplate.update(SQL_UPDATE_TASK, task.getId(), task.getName(),
+        return jdbcTemplate.update(SQL_UPDATE_TASK, task.getId(), task.getTitle(),
                 task.getCategory(), task.getIsComplete(), task.getIsImportant()) > 0;
     }
 
     @Override
     public boolean createTask(Task task) {
-        return jdbcTemplate.update(SQL_INSERT_TASK ,task.getId(), task.getName(),
+        return jdbcTemplate.update(SQL_INSERT_TASK ,task.getId(), task.getTitle(),
                 task.getCategory(), task.getIsComplete(), task.getIsImportant()) > 0;
     }
 }

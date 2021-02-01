@@ -46,9 +46,10 @@ public class ToDoController {
         }
 
         this.taskDAO.createTask(task);
-        return new ResponseEntity<>(task, headers, HttpStatus.OK);
+        return new ResponseEntity<>(task, headers, HttpStatus.CREATED);
     }
 
+    // Доробити цей метод
     @RequestMapping(value = "", method = RequestMethod.PUT)
     public ResponseEntity<Task> updateTask(@RequestBody Task task){
         HttpHeaders headers = new HttpHeaders();

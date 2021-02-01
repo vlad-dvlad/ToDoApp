@@ -7,7 +7,6 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = {"com.todo"})
 public class RootConfig {
 
     private final String URL = "jdbc:postgresql://127.0.0.1:5432/todo_db";

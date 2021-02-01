@@ -9,14 +9,14 @@ package com.todo.model;
 public class Task {
 
     private Long id;
-    private String name;
+    private String title;
     private String category;
     private boolean isComplete;
     private boolean isImportant;
 
-    public Task(Long id, String name, String category, boolean isComplete, boolean isImportant) {
+    public Task(Long id, String title, String category, boolean isComplete, boolean isImportant) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.category = category;
         this.isComplete = isComplete;
         this.isImportant = isImportant;
@@ -33,12 +33,12 @@ public class Task {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getCategory() {
@@ -69,7 +69,7 @@ public class Task {
     public String toString() {
         return "Task{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", title='" + title + '\'' +
                 ", category='" + category + '\'' +
                 ", isComplete=" + isComplete +
                 ", isImportant=" + isImportant +
