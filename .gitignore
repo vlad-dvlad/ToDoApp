@@ -1,7 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/workspace.xml
-src/main/webapp/
-target/classes/
-target/generated-sources/
-target/generated-test-sources/
-target/test-classes/
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
