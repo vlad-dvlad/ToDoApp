@@ -1,18 +1,31 @@
 package com.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 
+/**
+ * @author vlad-dvlad
+ */
+
 @Configuration
+@PropertySource(value = {"classpath:application.properties"})
 public class RootConfig {
 
-    private final String URL = "spring.datasource.url";
-    private final String USER = "spring.datasource.user";
-    private final String DRIVER = "spring.datasource.driver";
-    private final String PASSWORD = "spring.datasource.password";
+    @Value("${spring.datasource.url}")
+    private String URL;
+
+    @Value("${spring.datasource.user}")
+    private String USER;
+
+    @Value("${spring.datasource.driver}")
+    private String DRIVER;
+
+    @Value("${spring.datasource.password}")
+    private String PASSWORD;
 
     /**
      * Here we connect to database,
