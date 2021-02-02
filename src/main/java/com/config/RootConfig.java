@@ -9,10 +9,10 @@ import javax.sql.DataSource;
 @Configuration
 public class RootConfig {
 
-    private final String URL = "jdbc:postgresql://127.0.0.1:5432/todo_db";
-    private final String USER = "usr";
-    private final String DRIVER = "org.postgresql.Driver";
-    private final String PASSWORD = "admin";
+    private final String URL = "spring.datasource.url";
+    private final String USER = "spring.datasource.user";
+    private final String DRIVER = "spring.datasource.driver";
+    private final String PASSWORD = "spring.datasource.password";
 
     /**
      * Here we connect to database,
