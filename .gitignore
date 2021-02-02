@@ -1,8 +1,7 @@
-.idea/
-/target
-/out
-
-*.class
-*.war
-*.jar
-*ear
+# Created by .ignore support plugin (hsz.mobi)
+.idea/workspace.xml
+src/main/webapp/
+target/classes/
+target/generated-sources/
+target/generated-test-sources/
+target/test-classes/
