@@ -9,6 +9,14 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ * This class implements TaskDAO and perform
+ * CRUD operations. For this I use jdbcTemplate
+ * which connected to the PostgreSql.
+ * @author vlad-dvlad
+ * @version 1.0
+ * @since 2021-02-04
+ */
 @Component
 @ComponentScan(basePackages = "com.config")
 public class TaskDAOImpl implements TaskDAO {

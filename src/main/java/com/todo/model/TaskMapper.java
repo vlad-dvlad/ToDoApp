@@ -5,6 +5,11 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @version 1.0
+ * @since 2021-02-04
+ * @author vlad-dvlad
+ */
 public class TaskMapper implements RowMapper<Task> {
 
     @Override

@@ -13,8 +13,8 @@ import java.util.List;
 /**
  * This class is main controller, which
  * perform CRUD operation
+ * @author vlad-dvlad
  */
-
 @RestController
 @RequestMapping("/app/todo/")
 public class ToDoController {

@@ -4,8 +4,10 @@ package com.todo.model;
  * This class contain fields
  * for task, as id, name, category,
  * isComplete, isImportant
+ * @author vlad-dvlad
+ * @version 1.0
+ * @since 2021-02-04
  */
-
 public class Task {
 
     private Long id;
