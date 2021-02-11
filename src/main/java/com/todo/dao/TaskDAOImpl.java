@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -17,14 +18,14 @@ import java.util.List;
  * @version 1.0
  * @since 2021-02-04
  */
-@Component
+@Repository
 @ComponentScan(basePackages = "com.config")
 public class TaskDAOImpl implements TaskDAO {
 
     private final String SQL_FIND_TASK = "SELECT * FROM task WHERE ID = ?";
     private final String SQL_DELETE_TASK = "DELETE FROM task WHERE ID = ?";
-    private final String SQL_UPDATE_TASK = "UPDATE task SET ID = ?, TITLE = ?, " +
-            "TASK_CATEGORY = ?, IS_COMPLETE = ?, IS_IMPORTANT = ?";
+    private final String SQL_UPDATE_TASK = "UPDATE task SET TITLE = ?, " +
+            "TASK_CATEGORY = ?, IS_COMPLETE = ?, IS_IMPORTANT = ? WHERE ID = ?";
     private final String SQL_GET_ALL = "SELECT * FROM task";
     private final String SQL_INSERT_TASK = "INSERT INTO task(ID, TITLE, TASK_CATEGORY, IS_COMPLETE, IS_IMPORTANT)" +
             " VALUES(?, ?, ?, ?, ?)"; // ЧЕКНУТИ ЧИ 4 ЧИ 5
@@ -54,8 +55,8 @@ public class TaskDAOImpl implements TaskDAO {
 
     @Override
     public boolean updateTask(Task task) {
-        return jdbcTemplate.update(SQL_UPDATE_TASK, task.getId(), task.getTitle(),
-                task.getCategory(), task.getIsComplete(), task.getIsImportant()) > 0;
+        return jdbcTemplate.update(SQL_UPDATE_TASK, task.getTitle(),
+                task.getCategory(), task.getIsComplete(), task.getIsImportant(), task.getId()) > 0;
     }
 
     @Override
