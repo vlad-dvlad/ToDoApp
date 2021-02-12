@@ -18,7 +18,6 @@ import java.util.List;
  * @since 2021-02-04
  */
 @Repository
-@ComponentScan(basePackages = "com.config")
 public class TaskDAOImpl implements TaskDAO {
 
     private final String SQL_FIND_TASK = "SELECT * FROM task WHERE ID = ?";
